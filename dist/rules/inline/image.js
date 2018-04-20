@@ -11,7 +11,6 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 var rule_1 = require("../../api/rule");
-var token_1 = require("../../api/token");
 var RuleImage = (function (_super) {
     __extends(RuleImage, _super);
     function RuleImage() {
@@ -19,14 +18,8 @@ var RuleImage = (function (_super) {
         _this.setRegex(/^!\[([^\]]+)\] ?\(([^\)]+)\)/);
         return _this;
     }
-    RuleImage.prototype.lex = function (src) {
-        var token = new token_1.Token(this.name);
-        var p = [];
-        if ((p = this.getRegex().exec(src))) {
-            token.putValue(p[1], p[2]);
-            return token;
-        }
-        return token_1.Token.blank;
+    RuleImage.prototype.handle = function (p) {
+        return [true, [p[1], p[2]]];
     };
     return RuleImage;
 }(rule_1.Rule));

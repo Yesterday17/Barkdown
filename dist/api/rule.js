@@ -18,7 +18,19 @@ var Rule = (function () {
         return this.regex;
     };
     Rule.prototype.lex = function (src) {
+        var token = new token_1.Token(this.name);
+        var p = [];
+        if ((p = this.getRegex().exec(src))) {
+            var ans = this.handle(p);
+            if (ans[0]) {
+                token.putValue(ans[1]);
+                return token;
+            }
+        }
         return token_1.Token.blank;
+    };
+    Rule.prototype.handle = function (data) {
+        return [false, []];
     };
     return Rule;
 }());

@@ -24,8 +24,37 @@ export class Rule {
     return this.regex;
   }
 
+  /**
+   * The lifetime of a Rule when lexing
+   *
+   * 1. rule.lex(src)
+   *    Here, the function tries to idenfity whether the src given
+   *    matches the RegExp. If so, then run rule.handle() and pass
+   *    the array the next function needs.
+   * 2. rule.handle([])
+   *    This function inputs an array generaged by regex.exec(src),
+   *    and returns a [err, val] which indicates whether to generate
+   *    the token with the value or just throw it.(A second judge).
+   *
+   */
+
   // Lexing
   public lex(src: string): Token {
+    const token = new Token(this.name);
+    let p: any[] = [];
+
+    if ((p = this.getRegex().exec(src))) {
+      const ans = this.handle(p);
+      if (ans[0]) {
+        token.putValue(ans[1]);
+        return token;
+      }
+    }
+
     return Token.blank;
+  }
+
+  public handle(data: any[]): [boolean, any[]] {
+    return [false, []];
   }
 }
