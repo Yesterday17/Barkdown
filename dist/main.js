@@ -6,7 +6,7 @@ var Barked = (function () {
         if (lex === void 0) { lex = lexer_1.Lexer.blankLexer; }
         this.lexer = lex;
     }
-    Barked.prototype.parse = function () {
+    Barked.prototype.parse = function (src) {
         return "";
     };
     return Barked;

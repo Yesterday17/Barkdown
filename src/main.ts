@@ -13,7 +13,10 @@ class Barked {
     this.lexer = lex;
   }
 
-  public parse(): string {
+  public parse(src: string): string {
+    // Lexing
+    // this.lexer
+
     return "";
   }
 }

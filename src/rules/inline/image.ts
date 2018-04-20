@@ -1,6 +1,6 @@
 import { InlineRule } from "../../api/rules/inline";
 
-const image = new InlineRule("image");
-image.setRegex(/^!\[([^\]]+)\] ?\(([^\)]+)\)/);
+const Image = new InlineRule("image");
+Image.setRegex(/^!\[([^\]]+)\] ?\(([^\)]+)\)/);
 
-export default image;
+export { Image };
