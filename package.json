@@ -1,0 +1,11 @@
+{
+  "name": "barkdown",
+  "author": "Yesterday17",
+  "license": "MIT",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^4.0.2",
+    "typescript": "^2.8.3"
+  }
+}
