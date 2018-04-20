@@ -1,4 +1,4 @@
-export class Rule {
+export abstract class Rule {
   public name: string;
   public regex: RegExp;
 

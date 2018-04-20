@@ -3,5 +3,7 @@ import { Image } from "../dist/rules/inline/image";
 
 const lexer = new Lexer();
 
-lexer.addRule(Image);
+console.log(lexer.addRule(Image));
+console.log(lexer.addRule(Image));
+
 lexer.debug();

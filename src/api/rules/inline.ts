@@ -1,6 +1,6 @@
 import { Rule } from "./rule";
 
-export class InlineRule extends Rule {
+export abstract class InlineRule extends Rule {
   constructor(name: string) {
     super(name);
   }
