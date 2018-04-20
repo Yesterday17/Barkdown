@@ -1,4 +1,4 @@
-import { Rule } from "../rule";
+import { Rule } from "./rule";
 
 export class InlineRule extends Rule {
   constructor(name: string) {

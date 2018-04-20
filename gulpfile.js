@@ -6,5 +6,5 @@ gulp.task("default", function() {
   return tsProject
     .src()
     .pipe(tsProject())
-    .js.pipe(gulp.dest("dist"));
+    .js.pipe(gulp.dest("dist/dist"));
 });

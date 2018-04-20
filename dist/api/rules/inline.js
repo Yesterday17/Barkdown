@@ -10,7 +10,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var rule_1 = require("../rule");
+var rule_1 = require("./rule");
 var InlineRule = (function (_super) {
     __extends(InlineRule, _super);
     function InlineRule(name) {

@@ -6,22 +6,6 @@
         "sourceMap": true
     },
     "files": [
-        // Main
-        "src/main.ts",
-
-        // Components
-        "src/components/lexer.ts",
-        "src/components/parser.ts",
-
-        // API
-        "src/rules/rule.ts",
-        "src/rules/block/block.ts",
-        "src/rules/inline/inline.ts",
-
-        // Modules - Block
-        // "src/rules/block/*.ts",
-
-        // Modules - Inline
-        "src/rules/inline/image.ts"
+        "src/**/*"
     ]
 }
