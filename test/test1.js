@@ -6,3 +6,5 @@ var lexer = new lexer_1.Lexer();
 console.log(lexer.addRule(image_1.Image));
 console.log(lexer.addRule(image_1.Image));
 lexer.debug();
+lexer.delRule(image_1.Image);
+lexer.debug();

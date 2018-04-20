@@ -10,6 +10,6 @@
     "tslint": "^5.9.1"
   },
   "scripts": {
-    "test1": "gulp && tsc ./test/test1.ts && node ./test/test1/js"
+    "test1": "tsc ./test/test1.ts && node ./test/test1.js"
   }
 }

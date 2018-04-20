@@ -11,6 +11,11 @@ var Lexer = (function () {
         this.rules[rule.name] = rule;
         return true;
     };
+    Lexer.prototype.delRule = function (rule) {
+        if (this.rules[rule.name] !== undefined) {
+            delete this.rules[rule.name];
+        }
+    };
     Lexer.prototype.debug = function () {
         console.log(this.rules);
     };

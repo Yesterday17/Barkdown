@@ -14,6 +14,12 @@ export class Lexer {
     return true;
   }
 
+  public delRule(rule: Rule): void {
+    if (this.rules[rule.name] !== undefined) {
+      delete this.rules[rule.name];
+    }
+  }
+
   // Debug functions, must be removed.
   public debug(): void {
     console.log(this.rules);
