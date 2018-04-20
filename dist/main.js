@@ -1,4 +1,4 @@
-function hello(compiler) {
-    console.log("Hello from " + compiler);
-}
-hello("TypeScript");
+"use strict";
+exports.__esModule = true;
+var barked = function (src, options) {
+};
