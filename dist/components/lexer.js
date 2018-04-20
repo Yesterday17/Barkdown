@@ -23,7 +23,6 @@ var Lexer = (function () {
             for (var i in this.rules) {
                 var token = this.rules[i].lex(src);
                 if (token !== token_1.Token.blank) {
-                    console.log(token);
                     src = src.substring(token.getRaw().length);
                     tokens.push(token);
                     break;

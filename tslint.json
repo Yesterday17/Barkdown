@@ -6,7 +6,8 @@
     "no-console": false,
     "trailing-comma": false,
     "forin": false,
-    "no-conditional-assignment": false
+    "no-conditional-assignment": false,
+    "member-ordering": false
   },
   "rulesDirectory": []
 }

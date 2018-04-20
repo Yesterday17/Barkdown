@@ -1,6 +1,10 @@
 import { Rule } from "../../api/rule";
 
-const code = new Rule("code");
-code.setRegex(/     /);
+class RuleCode extends Rule {
+  constructor() {
+    super("Code");
+  }
+}
 
+const code = new RuleCode();
 export default code;

@@ -28,8 +28,6 @@ export class Lexer {
       for (const i in this.rules) {
         const token = this.rules[i].lex(src);
         if (token !== Token.blank) {
-          console.log(token);
-
           src = src.substring(token.getRaw().length);
           tokens.push(token);
           break;

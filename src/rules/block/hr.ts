@@ -1,8 +1,18 @@
 import { Rule } from "../../api/rule";
 
-const Hr = new Rule("Hr");
-Hr.setRegex(
-  /^((?:(?:\* ?){3,})|(?:(?:- ?){3,})|(?:(?:_ ?){3,}))(?:[\*-_] ?)* *\n/
-);
+class RuleHr extends Rule {
+  constructor() {
+    super("Hr");
+    this.setRegex(
+      /^((?:(?:\* ?){3,})|(?:(?:- ?){3,})|(?:(?:_ ?){3,}))(?:[\*-_] ?)* *\n/
+    );
+  }
+
+  public handle(data: any[]): [boolean, any[]] {
+    return [false, []];
+  }
+}
+
+const Hr = new RuleHr();
 
 export { Hr };

@@ -16,12 +16,12 @@ export class Rule {
     this.description = desc;
   }
 
-  public setRegex(reg: RegExp): void {
-    this.regex = reg;
-  }
-
   public getRegex(): RegExp {
     return this.regex;
+  }
+
+  protected setRegex(reg: RegExp): void {
+    this.regex = reg;
   }
 
   /**
@@ -46,6 +46,7 @@ export class Rule {
     if ((p = this.getRegex().exec(src))) {
       const ans = this.handle(p);
       if (ans[0]) {
+        token.setRaw(p[0]);
         token.putValue(ans[1]);
         return token;
       }

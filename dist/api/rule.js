@@ -11,11 +11,11 @@ var Rule = (function () {
     Rule.prototype.setDescription = function (desc) {
         this.description = desc;
     };
-    Rule.prototype.setRegex = function (reg) {
-        this.regex = reg;
-    };
     Rule.prototype.getRegex = function () {
         return this.regex;
+    };
+    Rule.prototype.setRegex = function (reg) {
+        this.regex = reg;
     };
     Rule.prototype.lex = function (src) {
         var token = new token_1.Token(this.name);
@@ -23,6 +23,7 @@ var Rule = (function () {
         if ((p = this.getRegex().exec(src))) {
             var ans = this.handle(p);
             if (ans[0]) {
+                token.setRaw(p[0]);
                 token.putValue(ans[1]);
                 return token;
             }

@@ -1,8 +1,14 @@
 import { Rule } from "../../../api/rule";
 
-const Bilihr = new Rule("Bilihr");
-Bilihr.setRegex(
-  /^((?:(?:\* ?){3,})|(?:(?:- ?){3,})|(?:(?:_ ?){3,}))(?:[\*-_] ?)* *\n/
-);
+class RuleBiliHr extends Rule {
+  constructor() {
+    super("BiliHr");
+    this.setRegex(
+      /^((?:(?:\* ?){3,})|(?:(?:- ?){3,})|(?:(?:_ ?){3,}))(?:[\*-_] ?)* *\n/
+    );
+  }
+}
+
+const Bilihr = new RuleBiliHr();
 
 export { Bilihr };
