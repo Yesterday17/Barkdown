@@ -1,6 +1,22 @@
 import { Rule } from './rules/rule';
-import { Lexer } from './components/lexer'
+import { Lexer, Token } from './components/lexer'
 
-let barked = function(src: string, options: any) {
-    //
+class Barked {
+    // Components
+    protected lexer: Lexer;
+
+    // Variables
+    private token: Token[];
+
+    constructor(lex: Lexer = Lexer.blankLexer){
+        this.lexer = lex;
+    };
+
+    parse(): string {
+        return '';
+    }
 }
+
+let barked = new Barked();
+
+export default barked;
