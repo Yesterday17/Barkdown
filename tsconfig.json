@@ -11,6 +11,7 @@
 
         // Components
         "src/components/lexer.ts",
+        "src/components/parser.ts",
 
         // API
         "src/rules/rule.ts",

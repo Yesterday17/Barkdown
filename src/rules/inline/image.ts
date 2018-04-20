@@ -1,6 +1,6 @@
 import { InlineRule } from './inline'
 
 const image = new InlineRule('image');
-image.setRegex(/^!\[([^\]]+)\] {0,1}\(([^\)]+)\)/);
+image.setRegex(/^!\[([^\]]+)\] ?\(([^\)]+)\)/);
 
 export default image;
