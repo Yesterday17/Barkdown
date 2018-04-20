@@ -1,4 +1,4 @@
-import { Rule } from "./api/rules/rule";
+import { Rule } from "./api/rule";
 import { Token } from "./api/token";
 import { Lexer } from "./components/lexer";
 
@@ -9,7 +9,7 @@ class Barked {
   // Variables
   private token: Token[];
 
-  constructor(lex: Lexer = Lexer.blankLexer) {
+  constructor(lex: Lexer = Lexer.blank) {
     this.lexer = lex;
   }
 

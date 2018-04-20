@@ -1,7 +1,8 @@
-import { Rule } from "../api/rules/rule";
+import { Rule } from "../api/rule";
+import { Token } from "../api/token";
 
 export class Lexer {
-  public static blankLexer = new Lexer();
+  public static blank = new Lexer();
 
   private rules: { [name: string]: Rule } = {};
 
@@ -18,6 +19,12 @@ export class Lexer {
     if (this.rules[rule.name] !== undefined) {
       delete this.rules[rule.name];
     }
+  }
+
+  public lex(src: string): Token[] {
+    const tokens: Token[] = Array<Token>();
+
+    return tokens;
   }
 
   // Debug functions, must be removed.

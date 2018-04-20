@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var block_1 = require("../../api/rules/block");
-var code = new block_1.BlockRule("code");
+var rule_1 = require("../../api/rule");
+var code = new rule_1.Rule("code");
 code.setRegex(/     /);
 exports["default"] = code;

@@ -5,6 +5,7 @@ var Token = (function () {
         this.type = t;
         this.value = val;
     }
+    Token.blank = new Token(null, null);
     return Token;
 }());
 exports.Token = Token;

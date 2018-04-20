@@ -1,5 +1,5 @@
 import { Token } from "../api/token";
 
-export class Parser {
+export class Renderer {
   //
 }

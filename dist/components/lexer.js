@@ -16,10 +16,14 @@ var Lexer = (function () {
             delete this.rules[rule.name];
         }
     };
+    Lexer.prototype.lex = function (src) {
+        var tokens = Array();
+        return tokens;
+    };
     Lexer.prototype.debug = function () {
         console.log(this.rules);
     };
-    Lexer.blankLexer = new Lexer();
+    Lexer.blank = new Lexer();
     return Lexer;
 }());
 exports.Lexer = Lexer;

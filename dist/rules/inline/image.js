@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var inline_1 = require("../../api/rules/inline");
-var Image = new inline_1.InlineRule("image");
+var rule_1 = require("../../api/rule");
+var Image = new rule_1.Rule("image");
 exports.Image = Image;
 Image.setRegex(/^!\[([^\]]+)\] ?\(([^\)]+)\)/);

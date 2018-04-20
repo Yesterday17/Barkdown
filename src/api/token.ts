@@ -1,7 +1,7 @@
 export class Token {
-  /// The Type of a token.
+  public static blank = new Token(null, null);
+
   private type: string;
-  // The content of a token.
   private value: any[];
 
   public constructor(t: string, val: any[]) {

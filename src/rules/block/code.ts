@@ -1,6 +1,6 @@
-import { BlockRule } from "../../api/rules/block";
+import { Rule } from "../../api/rule";
 
-const code = new BlockRule("code");
+const code = new Rule("code");
 code.setRegex(/     /);
 
 export default code;
