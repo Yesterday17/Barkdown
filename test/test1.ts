@@ -1,5 +1,4 @@
-import { Lexer } from "../dist/components/lexer";
-import { Image } from "../dist/rules/inline/image";
+import { Lexer, Image } from "../build/barked";
 
 const lexer = new Lexer();
 const src = `![233](2333333)`;
