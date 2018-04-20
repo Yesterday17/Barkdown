@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+var token_1 = require("../api/token");
 var Lexer = (function () {
     function Lexer() {
         this.rules = {};
@@ -18,6 +19,17 @@ var Lexer = (function () {
     };
     Lexer.prototype.lex = function (src) {
         var tokens = Array();
+        while (src) {
+            for (var i in this.rules) {
+                var token = this.rules[i].lex(src);
+                if (token !== token_1.Token.blank) {
+                    console.log(token);
+                    src = src.substring(token.getRaw().length);
+                    tokens.push(token);
+                    break;
+                }
+            }
+        }
         return tokens;
     };
     Lexer.prototype.debug = function () {

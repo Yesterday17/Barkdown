@@ -24,10 +24,23 @@ export class Lexer {
   public lex(src: string): Token[] {
     const tokens: Token[] = Array<Token>();
 
+    while (src) {
+      for (const i in this.rules) {
+        const token = this.rules[i].lex(src);
+        if (token !== Token.blank) {
+          console.log(token);
+
+          src = src.substring(token.getRaw().length);
+          tokens.push(token);
+          break;
+        }
+      }
+    }
+
     return tokens;
   }
 
-  // Debug functions, must be removed.
+  // Debug functions, should be removed before release.
   public debug(): void {
     console.log(this.rules);
   }

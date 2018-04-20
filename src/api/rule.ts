@@ -1,10 +1,10 @@
 import { Token } from "./token";
 
 export class Rule {
-  public name: string;
-  public description: string;
+  public name: string = "";
+  public description: string = "";
 
-  private regex: RegExp;
+  private regex: RegExp = new RegExp("");
 
   constructor(rname: string) {
     this.name = rname;
@@ -18,6 +18,10 @@ export class Rule {
 
   public setRegex(reg: RegExp): void {
     this.regex = reg;
+  }
+
+  public getRegex(): RegExp {
+    return this.regex;
   }
 
   // Lexing
