@@ -1,10 +1,7 @@
-import { Lexer, Image } from "../build/barked";
+import {all} from '../src/preset/all'
 
-const lexer = new Lexer();
 const src = `![233](2333333)`;
 
-console.log(lexer.addRule(Image));
+all.debug();
 
-lexer.debug();
-
-console.log(lexer.lex(src));
+console.log(all.lex(src));

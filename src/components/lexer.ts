@@ -38,9 +38,13 @@ export class Lexer {
     return tokens;
   }
 
-  // Debug functions, should be removed before release.
+  /**
+   * Debug function, only for debug purpose.
+   * 
+   * Output the lexer. 
+   */
   public debug(): void {
-    console.log(this.rules);
+    console.log(`Lexer: \n${JSON.stringify(this.rules, undefined, 2)}`);
   }
 }
 
