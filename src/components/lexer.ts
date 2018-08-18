@@ -7,17 +7,17 @@ export class Lexer {
   private rules: { [name: string]: Rule } = {};
 
   public addRule(rule: Rule): boolean {
-    if (this.rules[rule.name] !== undefined) {
+    if (this.rules[rule.getName()] !== undefined) {
       return false;
     }
 
-    this.rules[rule.name] = rule;
+    this.rules[rule.getName()] = rule;
     return true;
   }
 
   public delRule(rule: Rule): void {
-    if (this.rules[rule.name] !== undefined) {
-      delete this.rules[rule.name];
+    if (this.rules[rule.getName()] !== undefined) {
+      delete this.rules[rule.getName()];
     }
   }
 

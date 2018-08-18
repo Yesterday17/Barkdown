@@ -1,12 +1,13 @@
 export class Token {
   public static blank = new Token(null);
 
-  private type: string = "";
-  private value: any[] = [];
-  private raw: string = "";
+  private type: string;
+  private value: any[];
+  private raw: string;
 
   public constructor(t: string) {
     this.type = t;
+    this.value = [];
   }
 
   public setRaw(r: string): void {

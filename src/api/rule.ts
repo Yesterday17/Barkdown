@@ -1,19 +1,17 @@
 import { Token } from "./token";
 
-export class Rule {
-  public name: string = "";
-  public description: string = "";
+export abstract class Rule {
+  private name: string;
+  public description: string;
 
-  private regex: RegExp = new RegExp("");
+  private regex: RegExp;
 
   constructor(rname: string) {
     this.name = rname;
   }
 
-  // Functions on value
-
-  public setDescription(desc: string): void {
-    this.description = desc;
+  public getName(): string {
+    return this.name;
   }
 
   public getRegex(): RegExp {
