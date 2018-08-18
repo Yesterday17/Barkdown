@@ -6,5 +6,4 @@ class RuleCode extends Rule {
   }
 }
 
-const code = new RuleCode();
-export default code;
+export const code = new RuleCode();

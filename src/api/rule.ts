@@ -41,6 +41,8 @@ export abstract class Rule {
     const token = new Token(this.name);
     let p: any[] = [];
 
+    if (!this.getRegex().test(src)) return Token.blank;
+
     if ((p = this.getRegex().exec(src))) {
       const ans = this.handle(p);
       if (ans[0]) {
@@ -49,8 +51,6 @@ export abstract class Rule {
         return token;
       }
     }
-
-    return Token.blank;
   }
 
   public handle(data: any[]): [boolean, any[]] {

@@ -13,6 +13,5 @@ class RuleHr extends Rule {
   }
 }
 
-const Hr = new RuleHr();
+export const Hr = new RuleHr();
 
-export { Hr };

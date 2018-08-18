@@ -1,5 +1,4 @@
 import { Rule } from "../../api/rule";
-import { Token } from "../../api/token";
 
 class RuleImage extends Rule {
   constructor() {
@@ -7,11 +6,10 @@ class RuleImage extends Rule {
     this.setRegex(/^!\[([^\]]+)\] ?\(([^\)]+)\)/);
   }
 
-  public handle(p: any[]): [boolean, any[]] {
-    return [true, [p[1], p[2]]];
+  public handle(data: any[]): [boolean, any[]] {
+    return [true, [data[1], data[2]]];
   }
 }
 
-const Image = new RuleImage();
+export const Image = new RuleImage();
 
-export { Image };

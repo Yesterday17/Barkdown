@@ -1,4 +1,4 @@
-import { Rule } from "../../../api/rule";
+import { Rule } from "../../api/rule";
 
 class RuleBiliHr extends Rule {
   constructor() {
@@ -9,6 +9,5 @@ class RuleBiliHr extends Rule {
   }
 }
 
-const Bilihr = new RuleBiliHr();
+export const Bilihr = new RuleBiliHr();
 
-export { Bilihr };
