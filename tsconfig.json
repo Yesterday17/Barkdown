@@ -1,12 +1,11 @@
 {
-    "compilerOptions": {
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true
-    },
-    "files": [
-        "src/**/*",
-        "test/**/*"
-    ]
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "downlevelIteration": true,
+    "lib": ["es2015"],
+  },
+  "files": ["src/**/*", "test/**/*"]
 }
