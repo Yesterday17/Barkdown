@@ -1,6 +1,11 @@
 import { all } from "../src/preset/all";
 
 const src = `
+Test Header
+---
+
+12233
+==
 # Header 1
 ## Header 2
 ### Header 3
@@ -10,7 +15,6 @@ const src = `
 ##
 ###Not a Header
 ![233](2333333)
----
 `;
 
 // Print all the rules
