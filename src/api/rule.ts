@@ -44,16 +44,27 @@ export abstract class Rule {
     if (!this.getRegex().test(src)) return Token.blank;
 
     if ((p = this.getRegex().exec(src))) {
-      const ans = this.handle(p);
-      if (ans[0]) {
-        token.setRaw(p[0]);
-        token.putValue(ans[1]);
-        return token;
-      }
+      token.setRaw(p[0]);
+      token.putValue(this.handle(p));
+      return token;
     }
   }
 
-  public handle(data: any[]): [boolean, any[]] {
-    return [false, []];
-  }
+  /**
+   * A function which deals with the exec data. Should be like this:
+   *
+   * public handle(data: any[]): [boolean, any[]] {
+   *   return [false, []];
+   * }
+   *
+   * @param data The data returned by exec.
+   */
+  public abstract handle(data: any[]): any[];
+
+  /**
+   * A function which renders the token.
+   *
+   * @param token The token to render.
+   */
+  public abstract render(token: Token): string;
 }

@@ -10,6 +10,10 @@ export class Token {
     this.value = [];
   }
 
+  public getType(): string {
+    return this.type;
+  }
+
   public setRaw(r: string): void {
     this.raw = r;
   }
@@ -18,8 +22,8 @@ export class Token {
     return this.raw;
   }
 
-  public putValue(...val: any[]): void {
-    this.value.push(val);
+  public putValue(val: any[]): void {
+    Array.prototype.push.apply(this.value, val);
   }
 
   public getValue(): any[] {

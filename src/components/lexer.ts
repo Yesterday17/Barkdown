@@ -2,9 +2,11 @@ import { Rule } from "../api/rule";
 import { Token } from "../api/token";
 
 export class Lexer {
-  public static blank = new Lexer();
+  private rules: Map<string, Rule>;
 
-  private rules: Map<string, Rule> = new Map();
+  constructor() {
+    this.rules = new Map();
+  }
 
   public addRule(rule: Rule): boolean {
     if (this.rules.get(rule.getName()) !== undefined) {
@@ -21,6 +23,10 @@ export class Lexer {
     }
   }
 
+  public getRules(): Map<string, Rule> {
+    return this.rules;
+  }
+
   public lex(src: string): Token[] {
     const tokens: Token[] = Array<Token>();
 
@@ -28,7 +34,6 @@ export class Lexer {
       for (const [key, value] of this.rules) {
         const token = value.lex(src);
         if (token !== Token.blank) {
-          console.log(token);
           src = src.substring(token.getRaw().length);
           tokens.push(token);
           break;
@@ -48,6 +53,3 @@ export class Lexer {
     console.log(`Lexer: \n${JSON.stringify([...this.rules], undefined, 2)}`);
   }
 }
-
-export const defaultLexer = new Lexer();
-export const blankLexer = new Lexer();
