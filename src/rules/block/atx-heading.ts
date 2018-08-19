@@ -16,7 +16,7 @@ import { Token } from "../../api/token";
 class RuleATHHeading extends Rule {
   constructor() {
     super("atx-heading");
-    this.setRegex(/^(?: {0,3}(#{1,6}) ([^\n]+))|^(?: {0,3}(#{1,6}) ?)/);
+    this.setRegex(/^(?: {0,3}(#{1,6}) ([^\n]+))|^(?: {0,3}(#{1,6}) ?(?!.))/);
   }
 
   public handle(data: any[]): any[] {

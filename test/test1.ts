@@ -7,6 +7,8 @@ const src = `
 #### Header 4
 ##### Header 5
 ###### Header 6
+##
+###Not a Header
 ![233](2333333)
 ---
 `;
