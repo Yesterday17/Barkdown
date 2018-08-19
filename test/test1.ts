@@ -11,6 +11,13 @@ const src = `
 ---
 `;
 
-all.debug();
+// Print all the rules
+all.lexer.debug();
 
-console.log(JSON.stringify(all.lex(src), undefined, 2));
+const tokens = all.lexer.lex(src);
+
+// Print all the tokens
+console.log(JSON.stringify(tokens, undefined, 2));
+
+// Print the parse result
+console.log(all.renderer.parse(tokens));
