@@ -3,6 +3,7 @@ import { Token } from "../api/token";
 
 export class Lexer {
   private rules: Map<string, Rule>;
+  private purningRules: [];
 
   constructor() {
     this.rules = new Map();
@@ -25,6 +26,10 @@ export class Lexer {
 
   public getRules(): Map<string, Rule> {
     return this.rules;
+  }
+
+  public addpurningRule(): void {
+    //
   }
 
   public lex(src: string): Token[] {
