@@ -12,7 +12,7 @@ class RuleHardNewline extends Rule {
   }
 
   public render(token: Token): string {
-    return `<br>`;
+    return `<br />`;
   }
 }
 
