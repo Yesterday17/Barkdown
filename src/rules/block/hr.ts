@@ -5,12 +5,13 @@ class RuleHr extends Rule {
   constructor() {
     super("Hr");
     this.setRegex(
-      /^((?:(?:\* ?){3,})|(?:(?:- ?){3,})|(?:(?:_ ?){3,}))(?:[\*-_] ?)* *\n/
+      /^ {0,3}((- *){3,}|(_ *){3,}|(\* *){3,})\n/
     );
   }
 
   public handle(data: any[]): any[] {
-    return [data[1].replace(/ /g, "").length];
+    // -1 to ignore '\n'
+    return [data[0].replace(/ /g, "").length - 1];
   }
 
   public render(token: Token): string {
