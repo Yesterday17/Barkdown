@@ -9,9 +9,8 @@ class RuleHr extends Rule {
   }
 
   public handle(data: any[]): [boolean, any[]] {
-    return [false, []];
+    return [true, [data[1].replace(/ /g, "").length]];
   }
 }
 
 export const Hr = new RuleHr();
-
