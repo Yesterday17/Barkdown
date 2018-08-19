@@ -1,4 +1,5 @@
 import { Rule } from "../../api/rule";
+import { Token } from "../../api/token";
 
 class RuleText extends Rule {
   constructor() {
@@ -6,8 +7,12 @@ class RuleText extends Rule {
     this.setRegex(/^(.+)/);
   }
 
-  public handle(data: any[]): [boolean, any[]] {
-    return [true, [data[1]]];
+  public handle(data: any[]): any[] {
+    return [data[1]];
+  }
+
+  public render(token: Token): string {
+    return `<p>${token.getValue()[0]}</p>`;
   }
 }
 
