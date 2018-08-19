@@ -1,5 +1,5 @@
-import { Rule } from "../../api/rule";
-import { Token } from "../../api/token";
+import { Rule } from "../../../api/rule";
+import { Token } from "../../../api/token";
 
 /**
  * ATX headings:

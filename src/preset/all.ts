@@ -3,9 +3,9 @@ import { Renderer } from "../components/renderer";
 import { ATHHeading } from "../rules/block/atx-heading";
 import { HardNewline } from "../rules/block/hard-newline";
 import { Text } from "../rules/block/text";
-import { ThematicBreak } from "../rules/block/thematic-break";
+import { ThematicBreak } from "../rules/commonmark/block/thematic-break";
 import { Image } from "../rules/inline/image";
-import { SetextHeading } from "../rules/block/setext-heading";
+import { SetextHeading } from "../rules/commonmark/block/setext-heading";
 
 const lexer = new Lexer();
 lexer.addRule(ATHHeading);
