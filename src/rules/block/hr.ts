@@ -14,7 +14,7 @@ class RuleHr extends Rule {
   }
 
   public render(token: Token): string {
-    return `<hr>`;
+    return `<hr />`;
   }
 }
 
