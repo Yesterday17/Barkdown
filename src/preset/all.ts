@@ -1,9 +1,9 @@
 import { Lexer } from "../components/lexer";
-import { Image } from "../rules/inline/image";
-import { Text } from "../rules/block/text";
+import { Renderer } from "../components/renderer";
 import { HardNewline } from "../rules/block/hard-newline";
 import { Hr } from "../rules/block/hr";
-import { Renderer } from "../components/renderer";
+import { Text } from "../rules/block/text";
+import { Image } from "../rules/inline/image";
 
 const lexer = new Lexer();
 lexer.addRule(Hr);
